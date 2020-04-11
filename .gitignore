@@ -2,7 +2,3 @@ obj/
 bin/
 *.user
 /.vs/
-/source/Debug-x86/
-/source/Debug-x64/
-/source/Release-x86/
-/source/Release-x64/
