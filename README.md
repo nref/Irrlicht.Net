@@ -44,7 +44,7 @@ public void Run()
 
 ## Supporting Multiple Architectures
 
-```
+``` csproj
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   ...
