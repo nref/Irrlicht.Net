@@ -127,7 +127,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
     <Xdcmake />
   </ItemDefinitionGroup>
@@ -156,7 +156,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -182,7 +182,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -207,7 +207,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -534,6 +534,13 @@
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="WriteFile.cpp" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(ProjectDir)$(TargetName).props">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
