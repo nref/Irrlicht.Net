@@ -4,7 +4,7 @@
 
 ## Architecture
 
-These are two NuGet packages supporting `x86` and `x64` build. See [Irrlicht.NetCore.x64](https://www.nuget.org/packages/Irrlicht.NetCore.x64) and [Irrlicht.NetCore.x86](https://www.nuget.org/packages/Irrlicht.NetCore.x86).
+These are two NuGet packages supporting `x86` and `x64` builds. See [Irrlicht.NetCore.x64](https://www.nuget.org/packages/Irrlicht.NetCore.x64) and [Irrlicht.NetCore.x86](https://www.nuget.org/packages/Irrlicht.NetCore.x86).
 
 ## Dependencies
 
