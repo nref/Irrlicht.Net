@@ -18,7 +18,7 @@ For an example WPF app, see https://github.com/slater1/GraphicsTemplate/.
 
 ## Another Example
 
-```
+``` cs
 public void Run()
 {
     var p = new IrrlichtCreationParameters
