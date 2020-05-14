@@ -29,7 +29,7 @@ public void Run()
 
     var device = IrrlichtDevice.CreateDevice(p);
 
-    while (_device.Run())
+    while (device.Run())
     {
         device.VideoDriver.BeginScene();
         device.SceneManager.DrawAll();
