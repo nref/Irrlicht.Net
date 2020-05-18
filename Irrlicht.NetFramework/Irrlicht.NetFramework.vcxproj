@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{410900F4-34CF-44FC-8A3D-6B10200EA803}</ProjectGuid>
+    <RootNamespace>Irrlicht</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion> 
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bin\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">*.obj;*.ilk;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.xml;*.log;*.tlog;$(TargetPath)</ExtensionsToDeleteOnClean>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">*.obj;*.ilk;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.xml;*.log;*.tlog;$(TargetPath)</ExtensionsToDeleteOnClean>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bin\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bin\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">*.obj;*.ilk;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.xml;*.log;*.tlog;$(TargetPath)</ExtensionsToDeleteOnClean>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Release|x64'">*.obj;*.ilk;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.xml;*.log;*.tlog;$(TargetPath)</ExtensionsToDeleteOnClean>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>
+      </SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+    </PostBuildEvent>
+    <Xdcmake />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>
+      </SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../Source/AlphaSource.h" />
+    <ClInclude Include="../Source/AntiAliasingMode.h" />
+    <ClInclude Include="../Source/ArchiveLoader.h" />
+    <ClInclude Include="../Source/AttributeExchangingObject.h" />
+    <ClInclude Include="../Source/AttributeReadWriteFlag.h" />
+    <ClInclude Include="../Source/AttributeReadWriteOptions.h" />
+    <ClInclude Include="../Source/Attributes.h" />
+    <ClInclude Include="../Source/AttributeType.h" />
+    <ClInclude Include="../Source/BlendFactor.h" />
+    <ClInclude Include="../Source/BlendOperation.h" />
+    <ClInclude Include="../Source/ClearBufferFlag.h" />
+    <ClInclude Include="../Source/Color.h" />
+    <ClInclude Include="../Source/ColorFormat.h" />
+    <ClInclude Include="../Source/ColorMaterial.h" />
+    <ClInclude Include="../Source/ColorPlane.h" />
+    <ClInclude Include="../Source/ComparisonFunc.h" />
+    <ClInclude Include="../Source/CursorPlatformBehavior.h" />
+    <ClInclude Include="../Source/DriverType.h" />
+    <ClInclude Include="../Source/ExposedVideoData.h" />
+    <ClInclude Include="../Source/FileArchive.h" />
+    <ClInclude Include="../Source/FileArchiveType.h" />
+    <ClInclude Include="../Source/FileList.h" />
+    <ClInclude Include="../Source/FileSystem.h" />
+    <ClInclude Include="../Source/FileSystemType.h" />
+    <ClInclude Include="../Source/Fog.h" />
+    <ClInclude Include="../Source/FogType.h" />
+    <ClInclude Include="../Source/GeometryShaderType.h" />
+    <ClInclude Include="../Source/GPUProgrammingServices.h" />
+    <ClInclude Include="../Source/GPUShadingLanguage.h" />
+    <ClInclude Include="../Source/GUIElementInheritor.h" />
+    <ClInclude Include="../Source/GUISpinBoxValidation.h" />
+    <ClInclude Include="../Source/Image.h" />
+    <ClInclude Include="../Source/ImageLoader.h" />
+    <ClInclude Include="../Source/IndexType.h" />
+    <ClInclude Include="../Source/Light.h" />
+    <ClInclude Include="../Source/LightType.h" />
+    <ClInclude Include="../Source/Material.h" />
+    <ClInclude Include="../Source/MaterialFlag.h" />
+    <ClInclude Include="../Source/MaterialLayer.h" />
+    <ClInclude Include="../Source/MaterialRenderer.h" />
+    <ClInclude Include="../Source/MaterialRendererServices.h" />
+    <ClInclude Include="../Source/MaterialType.h" />
+    <ClInclude Include="../Source/ModulateFunc.h" />
+    <ClInclude Include="../Source/NamedPath.h" />
+    <ClInclude Include="../Source/PixelShaderType.h" />
+    <ClInclude Include="../Source/Randomizer.h" />
+    <ClInclude Include="../Source/ReadFile.h" />
+    <ClInclude Include="../Source/RenderTarget.h" />
+    <ClInclude Include="../Source/SceneParameters.h" />
+    <ClInclude Include="../Source/ShaderCallBackInheritor.h" />
+    <ClInclude Include="../Source/Texture.h" />
+    <ClInclude Include="../Source/TextureClamp.h" />
+    <ClInclude Include="../Source/TextureCreationFlag.h" />
+    <ClInclude Include="../Source/TextureLockMode.h" />
+    <ClInclude Include="../Source/TexturePainter.h" />
+    <ClInclude Include="../Source/TransformationState.h" />
+    <ClInclude Include="../Source/Vector2D_template.h" />
+    <ClInclude Include="../Source/Vector3D_template.h" />
+    <ClInclude Include="../Source/Vector_common_template.h" />
+    <ClInclude Include="../Source/Vertex.h" />
+    <ClInclude Include="../Source/Vertex_template.h" />
+    <ClInclude Include="../Source/VertexShaderType.h" />
+    <ClInclude Include="../Source/VertexType.h" />
+    <ClInclude Include="../Source/VideoDriver.h" />
+    <ClInclude Include="../Source/VideoDriverFeature.h" />
+    <ClInclude Include="../Source/VideoMode.h" />
+    <ClInclude Include="../Source/VideoModeAspectRatio.h" />
+    <ClInclude Include="../Source/VideoModeList.h" />
+    <ClInclude Include="../Source/AABBox.h" />
+    <ClInclude Include="../Source/Dimension.h" />
+    <ClInclude Include="../Source/Dimension2D_template.h" />
+    <ClInclude Include="../Source/Dimension2Df.h" />
+    <ClInclude Include="../Source/Dimension2Di.h" />
+    <ClInclude Include="../Source/Line.h" />
+    <ClInclude Include="../Source/Matrix.h" />
+    <ClInclude Include="../Source/Plane.h" />
+    <ClInclude Include="../Source/Quaternion.h" />
+    <ClInclude Include="../Source/Rect.h" />
+    <ClInclude Include="../Source/Rect_template.h" />
+    <ClInclude Include="../Source/Triangle.h" />
+    <ClInclude Include="../Source/Vector.h" />
+    <ClInclude Include="../Source/AnimatedMesh.h" />
+    <ClInclude Include="../Source/AnimatedMeshSceneNode.h" />
+    <ClInclude Include="../Source/AnimatedMeshType.h" />
+    <ClInclude Include="../Source/AnimationTypeMD2.h" />
+    <ClInclude Include="../Source/BillboardSceneNode.h" />
+    <ClInclude Include="../Source/BillboardTextSceneNode.h" />
+    <ClInclude Include="../Source/BoneAnimationMode.h" />
+    <ClInclude Include="../Source/BoneSceneNode.h" />
+    <ClInclude Include="../Source/BoneSkinningSpace.h" />
+    <ClInclude Include="../Source/CameraFPSSceneNodeAnimator.h" />
+    <ClInclude Include="../Source/CameraMayaSceneNodeAnimator.h" />
+    <ClInclude Include="../Source/CameraSceneNode.h" />
+    <ClInclude Include="../Source/CollisionResponseSceneNodeAnimator.h" />
+    <ClInclude Include="../Source/CullingType.h" />
+    <ClInclude Include="../Source/DebugSceneType.h" />
+    <ClInclude Include="../Source/DummyTransformationSceneNode.h" />
+    <ClInclude Include="../Source/DynamicMeshBuffer.h" />
+    <ClInclude Include="../Source/GeometryCreator.h" />
+    <ClInclude Include="../Source/HardwareBufferType.h" />
+    <ClInclude Include="../Source/HardwareMappingHint.h" />
+    <ClInclude Include="../Source/IndexBuffer.h" />
+    <ClInclude Include="../Source/InterpolationMode.h" />
+    <ClInclude Include="../Source/JointUpdateOnRender.h" />
+    <ClInclude Include="../Source/LightSceneNode.h" />
+    <ClInclude Include="../Source/Mesh.h" />
+    <ClInclude Include="../Source/MeshBuffer.h" />
+    <ClInclude Include="../Source/MeshCache.h" />
+    <ClInclude Include="../Source/MeshLoader.h" />
+    <ClInclude Include="../Source/MeshManipulator.h" />
+    <ClInclude Include="../Source/MeshSceneNode.h" />
+    <ClInclude Include="../Source/MetaTriangleSelector.h" />
+    <ClInclude Include="../Source/Particle.h" />
+    <ClInclude Include="../Source/ParticleAffector.h" />
+    <ClInclude Include="../Source/ParticleAffectorType.h" />
+    <ClInclude Include="../Source/ParticleAnimatedMeshSceneNodeEmitter.h" />
+    <ClInclude Include="../Source/ParticleAttractionAffector.h" />
+    <ClInclude Include="../Source/ParticleBoxEmitter.h" />
+    <ClInclude Include="../Source/ParticleCylinderEmitter.h" />
+    <ClInclude Include="../Source/ParticleEmitter.h" />
+    <ClInclude Include="../Source/ParticleEmitterType.h" />
+    <ClInclude Include="../Source/ParticleFadeOutAffector.h" />
+    <ClInclude Include="../Source/ParticleGravityAffector.h" />
+    <ClInclude Include="../Source/ParticleMeshEmitter.h" />
+    <ClInclude Include="../Source/ParticleRingEmitter.h" />
+    <ClInclude Include="../Source/ParticleRotationAffector.h" />
+    <ClInclude Include="../Source/ParticleSphereEmitter.h" />
+    <ClInclude Include="../Source/ParticleSystemSceneNode.h" />
+    <ClInclude Include="../Source/PrimitiveType.h" />
+    <ClInclude Include="../Source/SceneCollisionManager.h" />
+    <ClInclude Include="../Source/SceneLoader.h" />
+    <ClInclude Include="../Source/SceneManager.h" />
+    <ClInclude Include="../Source/SceneNode.h" />
+    <ClInclude Include="../Source/SceneNodeAnimator.h" />
+    <ClInclude Include="../Source/SceneNodeAnimatorType.h" />
+    <ClInclude Include="../Source/SceneNodeInheritor.h" />
+    <ClInclude Include="../Source/SceneNodeRenderPass.h" />
+    <ClInclude Include="../Source/SceneNodeType.h" />
+    <ClInclude Include="../Source/ShadowVolumeSceneNode.h" />
+    <ClInclude Include="../Source/SkinnedMesh.h" />
+    <ClInclude Include="../Source/TerrainPatchSize.h" />
+    <ClInclude Include="../Source/TerrainSceneNode.h" />
+    <ClInclude Include="../Source/TextSceneNode.h" />
+    <ClInclude Include="../Source/TriangleSelector.h" />
+    <ClInclude Include="../Source/VertexBuffer.h" />
+    <ClInclude Include="../Source/ViewFrustum.h" />
+    <ClInclude Include="../Source/VolumeLightSceneNode.h" />
+    <ClInclude Include="../Source/CursorControl.h" />
+    <ClInclude Include="../Source/GUIAlignment.h" />
+    <ClInclude Include="../Source/GUIButton.h" />
+    <ClInclude Include="../Source/GUIButtonState.h" />
+    <ClInclude Include="../Source/GUICheckBox.h" />
+    <ClInclude Include="../Source/GUIColorSelectDialog.h" />
+    <ClInclude Include="../Source/GUIColumnOrdering.h" />
+    <ClInclude Include="../Source/GUIComboBox.h" />
+    <ClInclude Include="../Source/GUIContextMenu.h" />
+    <ClInclude Include="../Source/GUIContextMenuClose.h" />
+    <ClInclude Include="../Source/GUIDefaultColor.h" />
+    <ClInclude Include="../Source/GUIDefaultFont.h" />
+    <ClInclude Include="../Source/GUIDefaultIcon.h" />
+    <ClInclude Include="../Source/GUIDefaultSize.h" />
+    <ClInclude Include="../Source/GUIDefaultText.h" />
+    <ClInclude Include="../Source/GUIEditBox.h" />
+    <ClInclude Include="../Source/GUIElement.h" />
+    <ClInclude Include="../Source/GUIElementType.h" />
+    <ClInclude Include="../Source/GUIEnvironment.h" />
+    <ClInclude Include="../Source/GUIEventType.h" />
+    <ClInclude Include="../Source/GUIFileOpenDialog.h" />
+    <ClInclude Include="../Source/GUIFont.h" />
+    <ClInclude Include="../Source/GUIFontType.h" />
+    <ClInclude Include="../Source/GUIImage.h" />
+    <ClInclude Include="../Source/GUIImageList.h" />
+    <ClInclude Include="../Source/GUIInOutFader.h" />
+    <ClInclude Include="../Source/GUIListBox.h" />
+    <ClInclude Include="../Source/GUIListBoxColor.h" />
+    <ClInclude Include="../Source/GUIMeshViewer.h" />
+    <ClInclude Include="../Source/GUIMessageBoxFlag.h" />
+    <ClInclude Include="../Source/GUIOrderingMode.h" />
+    <ClInclude Include="../Source/GUIScrollBar.h" />
+    <ClInclude Include="../Source/GUISkin.h" />
+    <ClInclude Include="../Source/GUISkinType.h" />
+    <ClInclude Include="../Source/GUISpinBox.h" />
+    <ClInclude Include="../Source/GUISpriteBank.h" />
+    <ClInclude Include="../Source/GUIStaticText.h" />
+    <ClInclude Include="../Source/GUITab.h" />
+    <ClInclude Include="../Source/GUITabControl.h" />
+    <ClInclude Include="../Source/GUITable.h" />
+    <ClInclude Include="../Source/GUITableDrawFlag.h" />
+    <ClInclude Include="../Source/GUIToolBar.h" />
+    <ClInclude Include="../Source/GUITreeView.h" />
+    <ClInclude Include="../Source/GUITreeViewNode.h" />
+    <ClInclude Include="../Source/GUIWindow.h" />
+    <ClInclude Include="../Source/DeviceType.h" />
+    <ClInclude Include="../Source/Event.h" />
+    <ClInclude Include="../Source/EventReceiverInheritor.h" />
+    <ClInclude Include="../Source/EventType.h" />
+    <ClInclude Include="../Source/IrrlichtCreationParameters.h" />
+    <ClInclude Include="../Source/IrrlichtDevice.h" />
+    <ClInclude Include="../Source/JoystickInfo.h" />
+    <ClInclude Include="../Source/KeyAction.h" />
+    <ClInclude Include="../Source/KeyCode.h" />
+    <ClInclude Include="../Source/KeyMap.h" />
+    <ClInclude Include="../Source/Lime.h" />
+    <ClInclude Include="../Source/Logger.h" />
+    <ClInclude Include="../Source/LogLevel.h" />
+    <ClInclude Include="../Source/MouseEventType.h" />
+    <ClInclude Include="../Source/OSOperator.h" />
+    <ClInclude Include="../Source/ReferenceCounted.h" />
+    <ClInclude Include="../Source/stdafx.h" />
+    <ClInclude Include="../Source/Timer.h" />
+    <ClInclude Include="../Source/WriteFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../Source/ArchiveLoader.cpp" />
+    <ClCompile Include="../Source/AttributeExchangingObject.cpp" />
+    <ClCompile Include="../Source/Attributes.cpp" />
+    <ClCompile Include="../Source/FileArchive.cpp" />
+    <ClCompile Include="../Source/FileList.cpp" />
+    <ClCompile Include="../Source/FileSystem.cpp" />
+    <ClCompile Include="../Source/GPUProgrammingServices.cpp" />
+    <ClCompile Include="../Source/Image.cpp" />
+    <ClCompile Include="../Source/ImageLoader.cpp" />
+    <ClCompile Include="../Source/Light.cpp" />
+    <ClCompile Include="../Source/Material.cpp" />
+    <ClCompile Include="../Source/MaterialLayer.cpp" />
+    <ClCompile Include="../Source/MaterialRenderer.cpp" />
+    <ClCompile Include="../Source/MaterialRendererServices.cpp" />
+    <ClCompile Include="../Source/Randomizer.cpp" />
+    <ClCompile Include="../Source/ReadFile.cpp" />
+    <ClCompile Include="../Source/Texture.cpp" />
+    <ClCompile Include="../Source/TexturePainter.cpp" />
+    <ClCompile Include="../Source/VideoDriver.cpp" />
+    <ClCompile Include="../Source/VideoModeList.cpp" />
+    <ClCompile Include="../Source/AnimatedMesh.cpp" />
+    <ClCompile Include="../Source/AnimatedMeshSceneNode.cpp" />
+    <ClCompile Include="../Source/BillboardSceneNode.cpp" />
+    <ClCompile Include="../Source/BillboardTextSceneNode.cpp" />
+    <ClCompile Include="../Source/BoneSceneNode.cpp" />
+    <ClCompile Include="../Source/CameraFPSSceneNodeAnimator.cpp" />
+    <ClCompile Include="../Source/CameraMayaSceneNodeAnimator.cpp" />
+    <ClCompile Include="../Source/CameraSceneNode.cpp" />
+    <ClCompile Include="../Source/CollisionResponseSceneNodeAnimator.cpp" />
+    <ClCompile Include="../Source/DummyTransformationSceneNode.cpp" />
+    <ClCompile Include="../Source/DynamicMeshBuffer.cpp" />
+    <ClCompile Include="../Source/GeometryCreator.cpp" />
+    <ClCompile Include="../Source/IndexBuffer.cpp" />
+    <ClCompile Include="../Source/LightSceneNode.cpp" />
+    <ClCompile Include="../Source/Mesh.cpp" />
+    <ClCompile Include="../Source/MeshBuffer.cpp" />
+    <ClCompile Include="../Source/MeshCache.cpp" />
+    <ClCompile Include="../Source/MeshLoader.cpp" />
+    <ClCompile Include="../Source/MeshManipulator.cpp" />
+    <ClCompile Include="../Source/MeshSceneNode.cpp" />
+    <ClCompile Include="../Source/MetaTriangleSelector.cpp" />
+    <ClCompile Include="../Source/Particle.cpp" />
+    <ClCompile Include="../Source/ParticleAffector.cpp" />
+    <ClCompile Include="../Source/ParticleAnimatedMeshSceneNodeEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleAttractionAffector.cpp" />
+    <ClCompile Include="../Source/ParticleBoxEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleCylinderEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleFadeOutAffector.cpp" />
+    <ClCompile Include="../Source/ParticleGravityAffector.cpp" />
+    <ClCompile Include="../Source/ParticleMeshEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleRingEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleRotationAffector.cpp" />
+    <ClCompile Include="../Source/ParticleSphereEmitter.cpp" />
+    <ClCompile Include="../Source/ParticleSystemSceneNode.cpp" />
+    <ClCompile Include="../Source/SceneCollisionManager.cpp" />
+    <ClCompile Include="../Source/SceneLoader.cpp" />
+    <ClCompile Include="../Source/SceneManager.cpp" />
+    <ClCompile Include="../Source/SceneNode.cpp" />
+    <ClCompile Include="../Source/SceneNodeAnimator.cpp" />
+    <ClCompile Include="../Source/ShadowVolumeSceneNode.cpp" />
+    <ClCompile Include="../Source/SkinnedMesh.cpp" />
+    <ClCompile Include="../Source/TerrainSceneNode.cpp" />
+    <ClCompile Include="../Source/TextSceneNode.cpp" />
+    <ClCompile Include="../Source/TriangleSelector.cpp" />
+    <ClCompile Include="../Source/VertexBuffer.cpp" />
+    <ClCompile Include="../Source/VolumeLightSceneNode.cpp" />
+    <ClCompile Include="../Source/CursorControl.cpp" />
+    <ClCompile Include="../Source/GUIButton.cpp" />
+    <ClCompile Include="../Source/GUICheckBox.cpp" />
+    <ClCompile Include="../Source/GUIColorSelectDialog.cpp" />
+    <ClCompile Include="../Source/GUIComboBox.cpp" />
+    <ClCompile Include="../Source/GUIContextMenu.cpp" />
+    <ClCompile Include="../Source/GUIEditBox.cpp" />
+    <ClCompile Include="../Source/GUIElement.cpp" />
+    <ClCompile Include="../Source/GUIEnvironment.cpp" />
+    <ClCompile Include="../Source/GUIFileOpenDialog.cpp" />
+    <ClCompile Include="../Source/GUIFont.cpp" />
+    <ClCompile Include="../Source/GUIImage.cpp" />
+    <ClCompile Include="../Source/GUIImageList.cpp" />
+    <ClCompile Include="../Source/GUIInOutFader.cpp" />
+    <ClCompile Include="../Source/GUIListBox.cpp" />
+    <ClCompile Include="../Source/GUIMeshViewer.cpp" />
+    <ClCompile Include="../Source/GUIScrollBar.cpp" />
+    <ClCompile Include="../Source/GUISkin.cpp" />
+    <ClCompile Include="../Source/GUISpinBox.cpp" />
+    <ClCompile Include="../Source/GUISpriteBank.cpp" />
+    <ClCompile Include="../Source/GUIStaticText.cpp" />
+    <ClCompile Include="../Source/GUITab.cpp" />
+    <ClCompile Include="../Source/GUITabControl.cpp" />
+    <ClCompile Include="../Source/GUITable.cpp" />
+    <ClCompile Include="../Source/GUIToolBar.cpp" />
+    <ClCompile Include="../Source/GUITreeView.cpp" />
+    <ClCompile Include="../Source/GUITreeViewNode.cpp" />
+    <ClCompile Include="../Source/GUIWindow.cpp" />
+    <ClCompile Include="../Source/AssemblyInfo.cpp" />
+    <ClCompile Include="../Source/Event.cpp" />
+    <ClCompile Include="../Source/IrrlichtDevice.cpp" />
+    <ClCompile Include="../Source/Logger.cpp" />
+    <ClCompile Include="../Source/OSOperator.cpp" />
+    <ClCompile Include="../Source/ReferenceCounted.cpp" />
+    <ClCompile Include="../Source/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="../Source/Timer.cpp" />
+    <ClCompile Include="../Source/WriteFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(ProjectDir)$(TargetName).props">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

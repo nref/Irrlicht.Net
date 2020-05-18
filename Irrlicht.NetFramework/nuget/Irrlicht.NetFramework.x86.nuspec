@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Irrlicht.NetFramework.x86</id>
+    <version>4.8</version>
+    <title>Irrlicht.NetFramework (x86)</title>
+    <authors>Doug Slater</authors>
+    <owners>Doug Slater</owners>
+    <license type="file">LICENSE</license>
+    <projectUrl>https://github.com/slater1/Irrlicht.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The ubiquitous Irrlicht graphics engine for .NET Framework 4.8 (x86)</description>
+    <summary>The ubiquitous Irrlicht graphics engine for .NET Framework 4.8 (x86)</summary>
+    <releaseNotes>Initial release for .NET Framework 4.8 (x86)</releaseNotes>
+    <copyright>Copyright 2020 Doug Slater</copyright>
+    <tags>Irrlicht 3D Graphics Direct3D OpenGL</tags>
+    <dependencies>
+      <group targetFramework="netframework4.8" >
+      </group>
+    </dependencies>
+    <references>
+      <group targetFramework="netframework4.8" >
+        <reference file="Irrlicht.NetFramework.dll" />
+      </group>
+    </references>
+  </metadata>
+  
+  <files>
+    <file src="..\..\LICENSE" target="LICENSE" />
+    <file src="..\bin\x86\Release\Irrlicht.dll" target="build" />
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x86.props" />
+    
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />
+
+    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="ref\netframework4.8" />
+
+  </files>
+
+</package>
