@@ -6,30 +6,30 @@ using namespace System::Runtime::CompilerServices;
 using namespace System::Runtime::InteropServices;
 using namespace System::Security::Permissions;
 
-[assembly:AssemblyTitleAttribute("Irrlicht Lime")];
+[assembly:AssemblyTitleAttribute("Irrlicht.Net")];
 
 #if _DEBUG
 #if WIN64
-[assembly:AssemblyDescriptionAttribute("The Irrlicht Lime is a .NET wrapper for the Irrlicht Engine. (This is Debug-x64 build.)")];
+[assembly:AssemblyDescriptionAttribute("The ubiquitous Irrlicht graphics engine for .NET. (Debug-x64)")];
 #else
-[assembly:AssemblyDescriptionAttribute("The Irrlicht Lime is a .NET wrapper for the Irrlicht Engine. (This is Debug-x86 build.)")];
+[assembly:AssemblyDescriptionAttribute("The ubiquitous Irrlicht graphics engine for .NET. (Debug-x86)")];
 #endif
 #else
 #if WIN64
-[assembly:AssemblyDescriptionAttribute("The Irrlicht Lime is a .NET wrapper for the Irrlicht Engine. (This is Release-x64 build.)")];
+[assembly:AssemblyDescriptionAttribute("The ubiquitous Irrlicht graphics engine for .NET. (Release-x64)")];
 #else
-[assembly:AssemblyDescriptionAttribute("The Irrlicht Lime is a .NET wrapper for the Irrlicht Engine. (This is Release-x86 build.)")];
+[assembly:AssemblyDescriptionAttribute("The ubiquitous Irrlicht graphics engine for .NET. (Release-x86)")];
 #endif
 #endif
 
 [assembly:AssemblyConfigurationAttribute("")];
 [assembly:AssemblyCompanyAttribute("")];
-[assembly:AssemblyProductAttribute("Irrlicht Lime")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Yuriy Grynevych 2010-2019")];
+[assembly:AssemblyProductAttribute("Irrlicht.Net")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) Doug Slater 2020")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
-[assembly:AssemblyVersionAttribute("1.6")];
+[assembly:AssemblyVersionAttribute("1.6.1.0")];
 
 [assembly:ComVisible(false)];
 [assembly:CLSCompliantAttribute(true)];
