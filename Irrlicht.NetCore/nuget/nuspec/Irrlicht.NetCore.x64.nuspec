@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Irrlicht.NetCore.x64</id>
+    <version>3.1.3</version>
+    <title>Irrlicht.NetCore (x64)</title>
+    <authors>Doug Slater</authors>
+    <owners>Doug Slater</owners>
+    <license type="file">LICENSE</license>
+    <projectUrl>https://github.com/slater1/Irrlicht.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The ubiquitous Irrlicht graphics engine for .NET Core 3.1 (x64)</description>
+    <summary>The ubiquitous Irrlicht graphics engine for .NET Core 3.1 (x64)</summary>
+    <releaseNotes>Initial release for .NET Core 3.1 (x64)</releaseNotes>
+    <copyright>Copyright 2020 Doug Slater</copyright>
+    <tags>Irrlicht 3D Graphics Direct3D OpenGL</tags>
+    <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
+    <!-- https://github.com/NuGet/Home/issues/6873 -->
+    <!-- <readme>readme.md</readme> -->
+    <dependencies>
+      <group targetFramework="netcoreapp3.1" >
+        <!-- <dependency id="Microsoft.Windows.Compatibility" version="3.1.0" /> -->
+      </group>
+    </dependencies>
+    <references>
+      <group targetFramework="netcoreapp3.1" >
+        <reference file="Irrlicht.NetCore.dll" />
+      </group>
+    </references>
+  </metadata>
+  
+  <files>
+    <file src="..\..\..\LICENSE" target="LICENSE" />
+    <file src="..\..\bin\x64\Release\Ijwhost.dll" target="build" />
+    <file src="..\..\bin\x64\Release\Irrlicht.dll" target="build" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.props" target="build\Irrlicht.NetCore.x64.props" />
+    
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.dll" target="lib\netcoreapp3.1" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.dll" target="lib\netcoreapp3.1" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.pdb" target="lib\netcoreapp3.1" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.deps.json" target="lib\netcoreapp3.1" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.runtimeconfig.json" target="lib\netcoreapp3.1" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.xml" target="lib\netcoreapp3.1" />
+
+    <file src="..\..\bin\x64\Release\Irrlicht.NetCore.dll" target="ref\netcoreapp3.1" />
+    
+    <file src="..\md\Irrlicht.NetCore.x64.md" target="readme.md"/>
+  </files>
+
+</package>

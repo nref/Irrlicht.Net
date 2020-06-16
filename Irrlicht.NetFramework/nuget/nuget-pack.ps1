@@ -1,0 +1,2 @@
+nuget pack nuspec/Irrlicht.NetFramework.x64.nuspec -OutputDirectory nupkg -Properties Configuration=Release
+nuget pack nuspec/Irrlicht.NetFramework.x86.nuspec -OutputDirectory nupkg -Properties Configuration=Release

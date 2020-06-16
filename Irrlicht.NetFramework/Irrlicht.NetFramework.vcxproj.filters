@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Video">
+      <UniqueIdentifier>{79265958-7641-4e64-9f46-27a953687e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{5c39c9d2-9546-4f6a-ad82-341de56739d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{63ccf941-190b-4a86-a186-5b8cac2396e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{610a5ea8-9fe5-4f5e-bfd0-e3844f2406f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{878544ac-5868-401d-9d80-0030f76eec8a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../Source/AntiAliasingMode.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Color.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ColorFormat.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ColorMaterial.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ColorPlane.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/DriverType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ExposedVideoData.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Fog.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FogType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GeometryShaderType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GPUProgrammingServices.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Image.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ImageLoader.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/IndexType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Light.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/LightType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Material.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MaterialFlag.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MaterialLayer.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MaterialRenderer.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MaterialRendererServices.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/PixelShaderType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ShaderCallBackInheritor.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Texture.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TextureClamp.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TextureCreationFlag.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TextureLockMode.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TexturePainter.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TransformationState.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vertex.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vertex_template.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VertexShaderType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VertexType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VideoDriver.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VideoDriverFeature.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VideoMode.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VideoModeAspectRatio.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VideoModeList.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AABBox.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Dimension.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Dimension2D_template.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Dimension2Df.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Dimension2Di.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Line.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Matrix.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Plane.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Quaternion.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Rect.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Rect_template.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Triangle.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vector.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AnimatedMesh.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AnimatedMeshSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AnimatedMeshType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AnimationTypeMD2.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BillboardSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BillboardTextSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BoneAnimationMode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BoneSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BoneSkinningSpace.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CameraFPSSceneNodeAnimator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CameraMayaSceneNodeAnimator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CameraSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CollisionResponseSceneNodeAnimator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CullingType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/DebugSceneType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/DummyTransformationSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/DynamicMeshBuffer.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GeometryCreator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/HardwareBufferType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/HardwareMappingHint.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/IndexBuffer.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/InterpolationMode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/JointUpdateOnRender.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/LightSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Mesh.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MeshBuffer.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MeshCache.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MeshLoader.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MeshManipulator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MeshSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MetaTriangleSelector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Particle.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleAffector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleAffectorType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleAnimatedMeshSceneNodeEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleAttractionAffector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleBoxEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleCylinderEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleEmitterType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleFadeOutAffector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleGravityAffector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleMeshEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleRingEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleRotationAffector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleSphereEmitter.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ParticleSystemSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/PrimitiveType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneCollisionManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneLoader.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNodeAnimator.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNodeAnimatorType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNodeInheritor.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNodeRenderPass.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneNodeType.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ShadowVolumeSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SkinnedMesh.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TerrainPatchSize.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TerrainSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TextSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/TriangleSelector.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VertexBuffer.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ViewFrustum.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/VolumeLightSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CursorControl.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIAlignment.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIButton.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIButtonState.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUICheckBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIColorSelectDialog.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIColumnOrdering.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIComboBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIContextMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIContextMenuClose.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIDefaultColor.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIDefaultFont.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIDefaultIcon.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIDefaultSize.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIDefaultText.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIEditBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIElement.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIElementType.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIEnvironment.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIEventType.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIFileOpenDialog.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIFont.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIFontType.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIImage.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIImageList.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIInOutFader.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIListBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIListBoxColor.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIMeshViewer.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIMessageBoxFlag.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIOrderingMode.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIScrollBar.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUISkin.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUISkinType.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUISpinBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUISpriteBank.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIStaticText.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITab.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITabControl.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITable.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITableDrawFlag.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIToolBar.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITreeView.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUITreeViewNode.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/DeviceType.h" />
+    <ClInclude Include="../Source/Event.h" />
+    <ClInclude Include="../Source/EventReceiverInheritor.h" />
+    <ClInclude Include="../Source/EventType.h" />
+    <ClInclude Include="../Source/IrrlichtCreationParameters.h" />
+    <ClInclude Include="../Source/IrrlichtDevice.h" />
+    <ClInclude Include="../Source/JoystickInfo.h" />
+    <ClInclude Include="../Source/KeyAction.h" />
+    <ClInclude Include="../Source/KeyCode.h" />
+    <ClInclude Include="../Source/KeyMap.h" />
+    <ClInclude Include="../Source/Lime.h" />
+    <ClInclude Include="../Source/Logger.h" />
+    <ClInclude Include="../Source/LogLevel.h" />
+    <ClInclude Include="../Source/MouseEventType.h" />
+    <ClInclude Include="../Source/OSOperator.h" />
+    <ClInclude Include="../Source/ReferenceCounted.h" />
+    <ClInclude Include="../Source/stdafx.h" />
+    <ClInclude Include="../Source/Timer.h" />
+    <ClInclude Include="../Source/BlendFactor.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/BlendOperation.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ModulateFunc.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ComparisonFunc.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AlphaSource.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUIElementInheritor.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Randomizer.h" />
+    <ClInclude Include="../Source/GPUShadingLanguage.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/SceneParameters.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/CursorPlatformBehavior.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/GUISpinBoxValidation.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/MaterialType.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/RenderTarget.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vector_common_template.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vector2D_template.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Vector3D_template.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ClearBufferFlag.h">
+      <Filter>Video</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ArchiveLoader.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AttributeReadWriteOptions.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AttributeExchangingObject.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AttributeReadWriteFlag.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/AttributeType.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/Attributes.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FileSystemType.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FileArchive.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FileArchiveType.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FileList.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/FileSystem.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/NamedPath.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/ReadFile.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="../Source/WriteFile.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../Source/GPUProgrammingServices.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Image.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ImageLoader.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Light.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Material.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MaterialLayer.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MaterialRenderer.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MaterialRendererServices.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Texture.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/TexturePainter.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/VideoDriver.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/VideoModeList.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/AnimatedMesh.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/AnimatedMeshSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/BillboardSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/BillboardTextSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/BoneSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/CameraFPSSceneNodeAnimator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/CameraMayaSceneNodeAnimator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/CameraSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/CollisionResponseSceneNodeAnimator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/DummyTransformationSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/DynamicMeshBuffer.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GeometryCreator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/IndexBuffer.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/LightSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Mesh.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MeshBuffer.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MeshCache.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MeshLoader.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MeshManipulator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MeshSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/MetaTriangleSelector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Particle.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleAffector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleAnimatedMeshSceneNodeEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleAttractionAffector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleBoxEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleCylinderEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleFadeOutAffector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleGravityAffector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleMeshEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleRingEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleRotationAffector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleSphereEmitter.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ParticleSystemSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SceneCollisionManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SceneLoader.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SceneNodeAnimator.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ShadowVolumeSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/SkinnedMesh.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/TerrainSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/TextSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/TriangleSelector.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/VertexBuffer.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/VolumeLightSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/CursorControl.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIButton.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUICheckBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIColorSelectDialog.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIComboBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIContextMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIEditBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIElement.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIEnvironment.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIFileOpenDialog.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIFont.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIImage.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIImageList.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIInOutFader.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIListBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIMeshViewer.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIScrollBar.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUISkin.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUISpinBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUISpriteBank.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIStaticText.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUITab.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUITabControl.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUITable.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIToolBar.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUITreeView.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUITreeViewNode.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/GUIWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/AssemblyInfo.cpp" />
+    <ClCompile Include="../Source/Event.cpp" />
+    <ClCompile Include="../Source/IrrlichtDevice.cpp" />
+    <ClCompile Include="../Source/Logger.cpp" />
+    <ClCompile Include="../Source/OSOperator.cpp" />
+    <ClCompile Include="../Source/ReferenceCounted.cpp" />
+    <ClCompile Include="../Source/stdafx.cpp" />
+    <ClCompile Include="../Source/Timer.cpp" />
+    <ClCompile Include="../Source/Randomizer.cpp" />
+    <ClCompile Include="../Source/ArchiveLoader.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/AttributeExchangingObject.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/FileArchive.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/FileList.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/FileSystem.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/ReadFile.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/WriteFile.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="../Source/Attributes.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../Source/packages.config" />
+  </ItemGroup>
+</Project>

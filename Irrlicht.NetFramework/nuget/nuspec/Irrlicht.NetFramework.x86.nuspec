@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Irrlicht.NetFramework.x86</id>
-    <version>4.8.1</version>
+    <version>4.8.2</version>
     <title>Irrlicht.NetFramework (x86)</title>
     <authors>Doug Slater</authors>
     <owners>Doug Slater</owners>
@@ -26,17 +26,18 @@
   </metadata>
   
   <files>
-    <file src="..\..\LICENSE" target="LICENSE" />
-    <file src="..\bin\x86\Release\Irrlicht.dll" target="build" />
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x86.props" />
+    <file src="..\..\..\LICENSE" target="LICENSE" />
+    <file src="..\..\bin\x86\Release\Irrlicht.dll" target="build" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x86.props" />
     
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />
 
-    <file src="..\bin\x86\Release\Irrlicht.NetFramework.dll" target="ref\netframework4.8" />
+    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.dll" target="ref\netframework4.8" />
 
+    <file src="..\md\Irrlicht.NetFramework.x86.md" target="readme.md"/>
   </files>
 
 </package>

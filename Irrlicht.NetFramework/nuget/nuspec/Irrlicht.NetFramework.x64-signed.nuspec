@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Irrlicht.NetFramework.x64-signed</id>
-    <version>4.8.1</version>
+    <version>4.8.2</version>
     <title>Irrlicht.NetFramework (x64) (Signed)</title>
     <authors>Doug Slater</authors>
     <owners>Doug Slater</owners>
@@ -14,6 +14,9 @@
     <releaseNotes>Initial release for .NET Framework 4.8 (x64) (Signed)</releaseNotes>
     <copyright>Copyright 2020 Doug Slater</copyright>
     <tags>Irrlicht 3D Graphics Direct3D OpenGL</tags>
+    <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
+    <!-- https://github.com/NuGet/Home/issues/6873 -->
+    <!-- <readme>readme.md</readme> -->
     <dependencies>
       <group targetFramework="netframework4.8" >
       </group>
@@ -26,17 +29,18 @@
   </metadata>
   
   <files>
-    <file src="..\..\LICENSE" target="LICENSE" />
-    <file src="..\bin\x64\Release\Irrlicht.dll" target="build" />
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x64-signed.props" />
+    <file src="..\..\..\LICENSE" target="LICENSE" />
+    <file src="..\..\bin\x64\Release\Irrlicht.dll" target="build" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x64-signed.props" />
     
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />
 
-    <file src="..\bin\x64\Release\Irrlicht.NetFramework.dll" target="ref\netframework4.8" />
+    <file src="..\..\bin\x64\Release\Irrlicht.NetFramework.dll" target="ref\netframework4.8" />
 
+    <file src="..\md\Irrlicht.NetFramework.x64-signed.md" target="readme.md"/>
   </files>
 
 </package>
