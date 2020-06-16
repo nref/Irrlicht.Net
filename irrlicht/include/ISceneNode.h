@@ -49,7 +49,7 @@ namespace scene
 			: RelativeTranslation(position), RelativeRotation(rotation), RelativeScale(scale),
 				Parent(0), SceneManager(mgr), TriangleSelector(0), ID(id),
 				AutomaticCullingState(EAC_BOX), DebugDataVisible(EDS_OFF),
-				IsVisible(true), IsDebugObject(false)
+				IsVisible(true), IsDebugObject(false), UseAbsoluteTransformation(false)
 		{
 			if (parent)
 				parent->addChild(this);
@@ -664,6 +664,11 @@ namespace scene
 			hierarchy you might want to update the parents first.*/
 		virtual void updateAbsolutePosition()
 		{
+			if (UseAbsoluteTransformation)
+			{
+				return;
+			}
+
 			if (Parent)
 			{
 				AbsoluteTransformation =
@@ -673,6 +678,25 @@ namespace scene
 				AbsoluteTransformation = getRelativeTransformation();
 		}
 
+		virtual void setAbsoluteTransformation(const core::matrix4& m)
+		{
+			AbsoluteTransformation = m;
+		}
+
+		/** Ignore parent and relative transform when calculating absolute transformation. 
+			Instead, use the value given by setAbsoluteTransformation(bool).
+			
+			Call this once globally before calling setAbsoluteTransformation(bool), else
+			the absolute transformation will be overwritten on the next call to onAnimate(). */
+		virtual void setUseAbsoluteTransformation(const bool value)
+		{
+			UseAbsoluteTransformation = value;
+		}
+
+		virtual bool getUseAbsoluteTransformation()
+		{
+			return UseAbsoluteTransformation;
+		}
 
 		//! Returns the parent of this scene node
 		/** \return A pointer to the parent. */
@@ -697,7 +721,7 @@ namespace scene
 		\param out The attribute container to write into.
 		\param options Additional options which might influence the
 		serialization. */
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
+		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const _IRR_OVERRIDE_
 		{
 			if (!out)
 				return;
@@ -722,7 +746,7 @@ namespace scene
 		\param in The attribute container to read from.
 		\param options Additional options which might influence the
 		deserialization. */
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
+		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0) _IRR_OVERRIDE_
 		{
 			if (!in)
 				return;
@@ -864,6 +888,8 @@ namespace scene
 
 		//! Is debug object?
 		bool IsDebugObject;
+
+		bool UseAbsoluteTransformation;
 	};
 
 

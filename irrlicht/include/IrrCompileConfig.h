@@ -175,18 +175,22 @@ define out. */
 
 //! Define required options for OpenGL drivers.
 #if defined(_IRR_COMPILE_WITH_OPENGL_)
-#if defined(_IRR_COMPILE_WITH_WINDOWS_DEVICE_)
-#define _IRR_OPENGL_USE_EXTPOINTER_
-#define _IRR_COMPILE_WITH_WGL_MANAGER_
-#elif defined(_IRR_COMPILE_WITH_X11_DEVICE_)
-#define _IRR_OPENGL_USE_EXTPOINTER_
-#define _IRR_COMPILE_WITH_GLX_MANAGER_
-#elif defined(_IRR_COMPILE_WITH_OSX_DEVICE_)
-#define _IRR_COMPILE_WITH_NSOGL_MANAGER_
-#elif defined(_IRR_SOLARIS_PLATFORM_)
-#define _IRR_COMPILE_WITH_GLX_MANAGER_
+	#if defined(_IRR_COMPILE_WITH_WINDOWS_DEVICE_)
+		#define _IRR_OPENGL_USE_EXTPOINTER_
+		#define _IRR_COMPILE_WITH_WGL_MANAGER_
+	#elif defined(_IRR_COMPILE_WITH_X11_DEVICE_)
+		#define _IRR_OPENGL_USE_EXTPOINTER_
+		#define _IRR_COMPILE_WITH_GLX_MANAGER_
+	#elif defined(_IRR_COMPILE_WITH_OSX_DEVICE_)
+		#define _IRR_COMPILE_WITH_NSOGL_MANAGER_
+	#elif defined(_IRR_SOLARIS_PLATFORM_)
+		#define _IRR_COMPILE_WITH_GLX_MANAGER_
+	#elif defined(_IRR_COMPILE_WITH_SDL_DEVICE_)
+		#define _IRR_OPENGL_USE_EXTPOINTER_
+	#endif
 #endif
-#endif
+
+
 
 //! Define _IRR_COMPILE_WITH_SOFTWARE_ to compile the Irrlicht engine with software driver
 /** If you do not need the software driver, or want to use Burning's Video instead,
@@ -270,7 +274,9 @@ the engine will no longer read .jpeg images. */
 
 //! Define _IRR_USE_NON_SYSTEM_JPEG_LIB_ to let irrlicht use the jpeglib which comes with irrlicht.
 /** If this is commented out, Irrlicht will try to compile using the jpeg lib installed in the system.
-	This is only used when _IRR_COMPILE_WITH_LIBJPEG_ is defined. */
+	This is only used when _IRR_COMPILE_WITH_LIBJPEG_ is defined.
+	NOTE: You will also have to modify the Makefile or project files when changing this default.
+	*/
 #define _IRR_USE_NON_SYSTEM_JPEG_LIB_
 #ifdef NO_IRR_USE_NON_SYSTEM_JPEG_LIB_
 #undef _IRR_USE_NON_SYSTEM_JPEG_LIB_
@@ -286,7 +292,9 @@ the engine will no longer read .png images. */
 
 //! Define _IRR_USE_NON_SYSTEM_LIBPNG_ to let irrlicht use the libpng which comes with irrlicht.
 /** If this is commented out, Irrlicht will try to compile using the libpng installed in the system.
-	This is only used when _IRR_COMPILE_WITH_LIBPNG_ is defined. */
+	This is only used when _IRR_COMPILE_WITH_LIBPNG_ is defined.
+	NOTE: You will also have to modify the Makefile or project files when changing this default.
+	*/
 #define _IRR_USE_NON_SYSTEM_LIB_PNG_
 #ifdef NO_IRR_USE_NON_SYSTEM_LIB_PNG_
 #undef _IRR_USE_NON_SYSTEM_LIB_PNG_
@@ -681,8 +689,10 @@ ones. */
 #endif
 //! Define _IRR_USE_NON_SYSTEM_ZLIB_ to let irrlicht use the zlib which comes with irrlicht.
 /** If this is commented out, Irrlicht will try to compile using the zlib
-installed on the system. This is only used when _IRR_COMPILE_WITH_ZLIB_ is
-defined. */
+	installed on the system. This is only used when _IRR_COMPILE_WITH_ZLIB_ is
+	defined.
+	NOTE: You will also have to modify the Makefile or project files when changing this default.
+ */
 #define _IRR_USE_NON_SYSTEM_ZLIB_
 #ifdef NO_IRR_USE_NON_SYSTEM_ZLIB_
 #undef _IRR_USE_NON_SYSTEM_ZLIB_
@@ -703,7 +713,9 @@ library. */
 //! Define _IRR_USE_NON_SYSTEM_BZLIB_ to let irrlicht use the bzlib which comes with irrlicht.
 /** If this is commented out, Irrlicht will try to compile using the bzlib
 installed on the system. This is only used when _IRR_COMPILE_WITH_BZLIB_ is
-defined. */
+defined.
+NOTE: You will also have to modify the Makefile or project files when changing this default.
+*/
 #define _IRR_USE_NON_SYSTEM_BZLIB_
 #ifdef NO_IRR_USE_NON_SYSTEM_BZLIB_
 #undef _IRR_USE_NON_SYSTEM_BZLIB_
@@ -815,9 +827,8 @@ precision will be lower but speed higher. currently X86 only
 #if defined(__BORLANDC__)
 	#include <tchar.h>
 
-	// Borland 5.5.1 does not have _strcmpi defined
+	// Borland 5.5.1
 	#if __BORLANDC__ == 0x551
-	//    #define _strcmpi strcmpi
 		#undef _tfinddata_t
 		#undef _tfindfirst
 		#undef _tfindnext

@@ -686,7 +686,7 @@ public:
 			return *this;
 
 		--used;
-		u32 len = other.size()+1;
+		const u32 len = other.size()+1;
 
 		if (used + len > allocated)
 			reallocate(used + len);
@@ -958,15 +958,14 @@ public:
 		string<T> o;
 		o.reserve(length+1);
 
-		s32 i;
 		if ( !make_lower )
 		{
-			for (i=0; i<length; ++i)
+			for (s32 i=0; i<length; ++i)
 				o.array[i] = array[i+begin];
 		}
 		else
 		{
-			for (i=0; i<length; ++i)
+			for (s32 i=0; i<length; ++i)
 				o.array[i] = locale_lower ( array[i+begin] );
 		}
 
@@ -1377,8 +1376,9 @@ public:
 	\param delimiter C-style string of delimiter characters
 	\param countDelimiters Number of delimiter characters
 	\param ignoreEmptyTokens Flag to avoid empty substrings in the result
-	container. If two delimiters occur without a character in between, an
-	empty substring would be placed in the result. If this flag is set,
+	container. If two delimiters occur without a character in between or an
+	empty substring would be placed in the result. Or if a delimiter is the last
+	character an empty substring would be added at the end.	If this flag is set,
 	only non-empty strings are stored.
 	\param keepSeparators Flag which allows to add the separator to the
 	result string. If this flag is true, the concatenation of the
@@ -1401,17 +1401,15 @@ public:
 			{
 				if (array[i] == delimiter[j])
 				{
+					if (i - tokenStartIdx > 0)
+						ret.push_back(string<T,TAlloc>(&array[tokenStartIdx], i - tokenStartIdx));
+					else if ( !ignoreEmptyTokens )
+						ret.push_back(string<T,TAlloc>());
 					if ( keepSeparators )
 					{
-						ret.push_back(string<T,TAlloc>(&array[tokenStartIdx], i+1 - tokenStartIdx));
+						ret.push_back(string<T,TAlloc>(&array[i], 1));
 					}
-					else
-					{
-						if (i - tokenStartIdx > 0)
-							ret.push_back(string<T,TAlloc>(&array[tokenStartIdx], i - tokenStartIdx));
-						else if ( !ignoreEmptyTokens )
-							ret.push_back(string<T,TAlloc>());
-					}
+
 					tokenStartIdx = i+1;
 					break;
 				}
@@ -1419,6 +1417,8 @@ public:
 		}
 		if ((used - 1) > tokenStartIdx)
 			ret.push_back(string<T,TAlloc>(&array[tokenStartIdx], (used - 1) - tokenStartIdx));
+		 else if ( !ignoreEmptyTokens )
+                ret.push_back(string<T,TAlloc>());
 
 		return ret.size()-oldSize;
 	}
@@ -1435,7 +1435,7 @@ private:
 		array = allocator.allocate(new_size); //new T[new_size];
 		allocated = new_size;
 
-		u32 amount = used < new_size ? used : new_size;
+		const u32 amount = used < new_size ? used : new_size;
 		for (u32 i=0; i<amount; ++i)
 			array[i] = old_array[i];
 
@@ -1479,7 +1479,7 @@ What the function does exactly depends on the LC_CTYPE of the current c locale.
 \return The number of wide characters written to destination, not including the eventual terminating null character  or -1 when conversion failed. */
 static inline size_t multibyteToWString(string<wchar_t>& destination, const char* source)
 {
-	u32 s = source ? (u32)strlen(source) : 0;
+	const u32 s = source ? (u32)strlen(source) : 0;
 	return multibyteToWString(destination, source, s);
 }
 
@@ -1493,7 +1493,7 @@ static size_t multibyteToWString(string<wchar_t>& destination, const char* sourc
 #pragma warning(push)
 #pragma warning(disable: 4996)	// 'mbstowcs': This function or variable may be unsafe. Consider using mbstowcs_s instead.
 #endif
-		size_t written = mbstowcs(destination.array, source, (size_t)sourceSize);
+		const size_t written = mbstowcs(destination.array, source, (size_t)sourceSize);
 #if defined(_MSC_VER)
 #pragma warning(pop)
 #endif
