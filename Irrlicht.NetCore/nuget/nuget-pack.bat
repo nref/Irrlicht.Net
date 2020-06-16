@@ -1,2 +1,0 @@
-nuget pack nuspec/Irrlicht.NetCore.x64.nuspec -OutputDirectory nupkg -Properties Configuration=Release
-nuget pack nuspec/Irrlicht.NetCore.x86.nuspec -OutputDirectory nupkg -Properties Configuration=Release

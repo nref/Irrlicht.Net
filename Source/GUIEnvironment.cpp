@@ -344,7 +344,7 @@ GUIFileOpenDialog^ GUIEnvironment::AddFileOpenDialog(String^ title, bool modal, 
         LIME_SAFEREF(parent, m_GUIElement),
         id,
         restoreCurrentWorkingDir,
-        (wchar_t*) LIME_SAFESTRINGTOSTRINGW_C_STR(startDir)); // !!! cast to non-const
+        (fschar_t*) LIME_SAFESTRINGTOSTRINGW_C_STR(startDir)); // !!! cast to non-const
 
     return GUIFileOpenDialog::Wrap(f);
 }

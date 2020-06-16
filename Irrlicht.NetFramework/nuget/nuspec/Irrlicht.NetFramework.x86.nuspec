@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Irrlicht.NetFramework.x86</id>
-    <version>4.8.2</version>
+    <version>4.8.3</version>
     <title>Irrlicht.NetFramework (x86)</title>
     <authors>Doug Slater</authors>
     <owners>Doug Slater</owners>
@@ -14,6 +14,9 @@
     <releaseNotes>Initial release for .NET Framework 4.8 (x86)</releaseNotes>
     <copyright>Copyright 2020 Doug Slater</copyright>
     <tags>Irrlicht 3D Graphics Direct3D OpenGL</tags>
+    <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
+    <!-- https://github.com/NuGet/Home/issues/6873 -->
+    <!-- <readme>readme.md</readme> -->
     <dependencies>
       <group targetFramework="netframework4.8" >
       </group>

@@ -67,7 +67,7 @@ internal:
         if (!String::IsNullOrEmpty(options->Filename))
         {
             int s = options->Filename->Length + 1;
-            o->Filename = new wchar_t[s];
+            o->Filename = new fschar_t[s];
 
             core::stringw w = Lime::StringToStringW(options->Filename);
             LIME_ASSERT(s == (int)(w.size() + 1));

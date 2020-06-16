@@ -30,4 +30,3 @@ foreach ($e in $dirs.GetEnumerator()) {
 }
 
 Echo-Iex "Copy-Item $in\include -Destination $out -Recurse -Force"
-Echo-Iex "Copy-Item $out\IrrCompileConfig.h -Destination $out\include"
