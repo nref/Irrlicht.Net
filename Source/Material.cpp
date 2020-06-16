@@ -304,17 +304,7 @@ bool Material::ZWrite::get()
 
 void Material::ZWrite::set(bool value)
 {
-    m_NativeValue->ZWriteEnable = value;
-}
-
-bool Material::ZWriteFineControl::get()
-{
-    return m_NativeValue->ZWriteFineControl;
-}
-
-void Material::ZWriteFineControl::set(bool value)
-{
-    m_NativeValue->ZWriteFineControl = (video::E_ZWRITE_FINE_CONTROL)(value ? 1 : 0);
+    m_NativeValue->ZWriteEnable = value ? irr::video::EZW_AUTO : irr::video::EZW_OFF;
 }
 
 bool Material::BackfaceCulling::get()

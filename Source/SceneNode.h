@@ -47,6 +47,7 @@ public:
 
     property Vector3Df^ AbsolutePosition { Vector3Df^ get(); }
     property Matrix^ AbsoluteTransformation { Matrix^ get(); void set(Matrix^ value); }
+    property bool UseAbsoluteTransformation { bool get(); void set(bool value); }
     property List<SceneNodeAnimator^>^ AnimatorList { List<SceneNodeAnimator^>^ get(); }
     property CullingType AutomaticCulling { CullingType get(); void set(CullingType value); }
     property AABBox^ BoundingBox { AABBox^ get(); }

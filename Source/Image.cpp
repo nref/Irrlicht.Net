@@ -19,9 +19,9 @@ bool Image::IsCompressedFormat(Video::ColorFormat format)
     return video::IImage::isCompressedFormat((ECOLOR_FORMAT)format);
 }
 
-bool Image::IsRenderTargetOnlyFormat(Video::ColorFormat format)
+bool Image::IsFloatingPointFormat(Video::ColorFormat format)
 {
-    return video::IImage::isRenderTargetOnlyFormat((ECOLOR_FORMAT)format);
+    return video::IImage::isFloatingPointFormat((ECOLOR_FORMAT)format);
 }
 
 //System::Drawing::Imaging::PixelFormat Image::GetPixelFormat(Video::ColorFormat format)

@@ -117,7 +117,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
       <TargetMachine>MachineX86</TargetMachine>
@@ -127,7 +127,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
     <Xdcmake />
   </ItemDefinitionGroup>
@@ -147,7 +147,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
       <SubSystem>
@@ -156,7 +156,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -175,14 +175,14 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -201,13 +201,13 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -239,7 +239,6 @@
     <ClInclude Include="../Source/FogType.h" />
     <ClInclude Include="../Source/GeometryShaderType.h" />
     <ClInclude Include="../Source/GPUProgrammingServices.h" />
-    <ClInclude Include="../Source/GPUShadingLanguage.h" />
     <ClInclude Include="../Source/GUIElementInheritor.h" />
     <ClInclude Include="../Source/GUISpinBoxValidation.h" />
     <ClInclude Include="../Source/Image.h" />
@@ -534,13 +533,11 @@
     <ClCompile Include="../Source/Timer.cpp" />
     <ClCompile Include="../Source/WriteFile.cpp" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="$(ProjectDir)$(TargetName).props">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

@@ -36,7 +36,6 @@
 #include "FileSystemType.h"
 #include "FogType.h"
 #include "GeometryShaderType.h"
-#include "GPUShadingLanguage.h"
 #include "GUIAlignment.h"
 #include "GUIButtonState.h"
 #include "GUIColumnOrdering.h"

@@ -308,6 +308,16 @@ void SceneNode::AbsoluteTransformation::set(Matrix^ value)
     i->AbsoluteTransformation_set(*value->m_NativeValue);
 }
 
+bool SceneNode::UseAbsoluteTransformation::get()
+{
+    return m_SceneNode->getUseAbsoluteTransformation();
+}
+
+void SceneNode::UseAbsoluteTransformation::set(bool value)
+{
+    m_SceneNode->setUseAbsoluteTransformation(value);
+}
+
 List<SceneNodeAnimator^>^ SceneNode::AnimatorList::get()
 {
     List<SceneNodeAnimator^>^ l = gcnew List<SceneNodeAnimator^>();

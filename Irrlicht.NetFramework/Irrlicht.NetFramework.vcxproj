@@ -118,7 +118,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
       <TargetMachine>MachineX86</TargetMachine>
@@ -128,7 +128,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
     <Xdcmake />
   </ItemDefinitionGroup>
@@ -148,7 +148,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
       <SubSystem>
@@ -157,7 +157,7 @@
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -176,14 +176,14 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -202,13 +202,13 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "..\irrlicht\lib\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
+      <Command>copy /Y "..\irrlicht\bin\$(PlatformTarget)\$(Configuration)\Irrlicht.dll" "$(OutputPath)Irrlicht.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
