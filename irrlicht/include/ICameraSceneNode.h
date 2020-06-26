@@ -120,6 +120,10 @@ namespace scene
 		/** \return The field of view of the camera in radians. */
 		virtual f32 getFOV() const =0;
 
+		//! Return whether or not this camera uses a left-handed projection
+		/** \return True if this camera uses a left-handed projection, else false. */
+		virtual bool getUseLeftHandProjection() const =0;
+
 		//! Sets the value of the near clipping plane. (default: 1.0f)
 		/** \param zn: New z near value. */
 		virtual void setNearValue(f32 zn) =0;
@@ -135,6 +139,11 @@ namespace scene
 		//! Sets the field of view (Default: PI / 2.5f)
 		/** \param fovy: New field of view in radians. */
 		virtual void setFOV(f32 fovy) =0;
+
+		//! Set to true to use a left-handed projection matrix.
+		//! Set to false to use a right-handed projection matrix.
+		/** \param use: New projection matrix setting. */
+		virtual void setUseLeftHandProjection(bool use) =0;
 
 		//! Get the view frustum.
 		/** \return The current view frustum. */

@@ -127,6 +127,16 @@ void CameraSceneNode::TargetAndRotationBinding::set(bool value)
     m_CameraSceneNode->bindTargetAndRotation(value);
 }
 
+bool CameraSceneNode::UseLeftHandProjection::get()
+{
+    return m_CameraSceneNode->getUseLeftHandProjection();
+}
+
+void CameraSceneNode::UseLeftHandProjection::set(bool value)
+{
+    m_CameraSceneNode->setUseLeftHandProjection(value);
+}
+
 Vector3Df^ CameraSceneNode::UpVector::get()
 {
     return gcnew Vector3Df(m_CameraSceneNode->getUpVector());

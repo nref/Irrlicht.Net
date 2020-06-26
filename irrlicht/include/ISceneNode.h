@@ -693,6 +693,8 @@ namespace scene
 			UseAbsoluteTransformation = value;
 		}
 
+		//! If true, the parent and relative transformations have no effect.
+		//! If false, the parent and relative transformations have effect.
 		virtual bool getUseAbsoluteTransformation()
 		{
 			return UseAbsoluteTransformation;
