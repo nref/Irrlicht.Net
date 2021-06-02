@@ -89,6 +89,12 @@ public:
         void set(LogLevel value) { m_NativeValue->LoggingLevel = (ELOG_LEVEL)value; }
     }
 
+    property bool ExitOnClose
+    {
+      bool get() { return m_NativeValue->ExitOnClose; }
+      void set(bool value) { m_NativeValue->ExitOnClose = value; }
+    }
+
     property bool StencilBuffer
     {
         bool get() { return m_NativeValue->Stencilbuffer; }

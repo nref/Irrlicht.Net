@@ -28,6 +28,7 @@ namespace irr
 			Bits(32),
 			ZBufferBits(24),
 			Fullscreen(false),
+			ExitOnClose(true),
 			WindowResizable(false),
 			Stencilbuffer(true),
 			Vsync(false),
@@ -123,6 +124,10 @@ namespace irr
 		/** Might not be supported by all devices. Ignored when Fullscreen is true.
 		Default: false */
 		bool WindowResizable;
+
+		//! If true, closeDevice will exit the application. Else, only the window will be closed.
+		/** Default is true. Set to false if multiple devices are created and closed in the same application. */
+		bool ExitOnClose;
 
 		//! Specifies if the stencil buffer should be enabled.
 		/** Set this to true, if you want the engine be able to draw
