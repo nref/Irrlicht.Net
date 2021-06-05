@@ -66,6 +66,7 @@ namespace irr
 			Bits = other.Bits;
 			ZBufferBits = other.ZBufferBits;
 			Fullscreen = other.Fullscreen;
+			ExitOnClose = other.ExitOnClose;
 			WindowResizable = other.WindowResizable;
 			Stencilbuffer = other.Stencilbuffer;
 			Vsync = other.Vsync;
