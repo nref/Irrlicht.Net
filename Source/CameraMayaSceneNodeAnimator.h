@@ -17,6 +17,8 @@ public:
     property float MoveSpeed { float get(); void set(float value); }
     property float RotateSpeed { float get(); void set(float value); }
     property float ZoomSpeed { float get(); void set(float value); }
+    property float RotX { float get(); void set(float value); }
+    property float RotY { float get(); void set(float value); }
 
 internal:
 

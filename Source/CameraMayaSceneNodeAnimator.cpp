@@ -63,5 +63,24 @@ void CameraMayaSceneNodeAnimator::ZoomSpeed::set(float value)
     m_CameraMayaSceneNodeAnimator->setZoomSpeed(value);
 }
 
+float CameraMayaSceneNodeAnimator::RotX::get()
+{
+  return m_CameraMayaSceneNodeAnimator->getRotX();
+}
+
+void CameraMayaSceneNodeAnimator::RotX::set(float value)
+{
+  m_CameraMayaSceneNodeAnimator->setRotX(value);
+}
+float CameraMayaSceneNodeAnimator::RotY::get()
+{
+  return m_CameraMayaSceneNodeAnimator->getRotY();
+}
+
+void CameraMayaSceneNodeAnimator::RotY::set(float value)
+{
+  m_CameraMayaSceneNodeAnimator->setRotY(value);
+}
+
 } // end namespace Scene
 } // end namespace Irrlicht

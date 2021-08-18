@@ -56,6 +56,11 @@ namespace scene
 		//! Returns the minimal distance to the camera target for zoom
 		virtual f32 getTargetMinDistance() const = 0;
 
+		virtual f32 getRotX() const = 0;
+		virtual void setRotX(f32 distance) = 0;
+
+		virtual f32 getRotY() const = 0;
+		virtual void setRotY(f32 distance) = 0;
 	};
 
 } // end namespace scene
