@@ -544,4 +544,17 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <!-- This ItemGroup mitigates error NETSDK1145 which occurs
+       when VS2019 and VS2022 preview are both installed -->
+  <!-- See https://docs.microsoft.com/en-us/dotnet/core/tools/sdk-errors/netsdk1145 -->
+  <!-- See https://github.com/dotnet/sdk/issues/20109 -->
+  <!-- Must be after Microsoft.Cpp.targets -->
+  <!-- See https://github.com/dotnet/sdk/issues/20109#issuecomment-906105438 -->
+  <ItemGroup>
+    <KnownAppHostPack Update="@(KnownAppHostPack)">
+      <!-- There must be a folder with this version in C:\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App -->
+      <!-- Additional versions are on NuGet. See https://www.nuget.org/packages/Microsoft.NETCore.App.Host.win-x64 -->
+      <AppHostPackVersion Condition="'%(TargetFramework)' == 'netcoreapp3.1'">3.1.19</AppHostPackVersion>
+    </KnownAppHostPack>
+  </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Irrlicht.NetFramework.x86-signed</id>
-    <version>4.8.8</version>
+    <version>4.8.10</version>
     <title>Irrlicht.NetFramework (x86) (Signed)</title>
     <authors>Doug Slater</authors>
     <owners>Doug Slater</owners>
@@ -12,7 +12,7 @@
     <description>The ubiquitous Irrlicht graphics engine for .NET Framework 4.8 (x86) (Signed)</description>
     <summary>The ubiquitous Irrlicht graphics engine for .NET Framework 4.8 (x86) (Signed)</summary>
     <releaseNotes>Initial release for .NET Framework 4.8 (x86) (Signed)</releaseNotes>
-    <copyright>Copyright 2020 Doug Slater</copyright>
+    <copyright>Copyright 2022 Doug Slater</copyright>
     <tags>Irrlicht 3D Graphics Direct3D OpenGL</tags>
     <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
     <!-- https://github.com/NuGet/Home/issues/6873 -->
@@ -33,7 +33,6 @@
     <file src="..\..\bin\x86\Release\Irrlicht.dll" target="build" />
     <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.props" target="build\Irrlicht.NetFramework.x86-signed.props" />
     
-    <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
     <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.dll" target="lib\netframework4.8" />
     <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.pdb" target="lib\netframework4.8" />
     <file src="..\..\bin\x86\Release\Irrlicht.NetFramework.xml" target="lib\netframework4.8" />

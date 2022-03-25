@@ -541,9 +541,6 @@
       <Filter>GUI</Filter>
     </ClInclude>
     <ClInclude Include="../Source/Randomizer.h" />
-    <ClInclude Include="../Source/GPUShadingLanguage.h">
-      <Filter>Video</Filter>
-    </ClInclude>
     <ClInclude Include="../Source/SceneParameters.h">
       <Filter>Scene</Filter>
     </ClInclude>
@@ -911,6 +908,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="../Source/packages.config" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
