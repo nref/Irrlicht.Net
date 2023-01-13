@@ -12,7 +12,7 @@ Architecture | Target Framework | NuGet Package
 `x64`        | net48            | [Irrlicht.NetFramework.x64](https://www.nuget.org/packages/Irrlicht.NetFramework.x64)
 `x86`        | netcoreapp31     | [Irrlicht.NetCore.x86](https://www.nuget.org/packages/Irrlicht.NetCore.x86)
 `x64`        | netcoreapp31     | [Irrlicht.NetCore.x64](https://www.nuget.org/packages/Irrlicht.NetCore.x64)
-`x64`        | net6.0-iwnodw    | (not published)
+`x64`        | net6.0-windows   | (not published)
 
 ## Dependencies
 
