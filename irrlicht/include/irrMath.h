@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __IRR_MATH_H_INCLUDED__
-#define __IRR_MATH_H_INCLUDED__
+#ifndef IRR_MATH_H_INCLUDED
+#define IRR_MATH_H_INCLUDED
 
 #include "IrrCompileConfig.h"
 #include "irrTypes.h"
@@ -243,7 +243,7 @@ namespace core
 
 	//! returns if a equals b, taking possible rounding errors into account
 	template <class T>
-	inline bool equals(const T a, const T b, const T tolerance = roundingError<T>()) 
+	inline bool equals(const T a, const T b, const T tolerance = roundingError<T>())
 	{
 		return (a + tolerance >= b) && (a - tolerance <= b);
 	}
@@ -633,7 +633,7 @@ namespace core
 		return rec;
 */
 /*
-		register u32 x = 0x7F000000 - IR ( p );
+		u32 x = 0x7F000000 - IR ( p );
 		const f32 r = FR ( x );
 		return r * (2.0f - p * r);
 */

@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __I_TEXTURE_H_INCLUDED__
-#define __I_TEXTURE_H_INCLUDED__
+#ifndef IRR_I_TEXTURE_H_INCLUDED
+#define IRR_I_TEXTURE_H_INCLUDED
 
 #include "IReferenceCounted.h"
 #include "IImage.h"
@@ -96,6 +96,14 @@ enum E_TEXTURE_CREATION_FLAG
 	- You can still call regenerateMipMapLevels when this flag is enabled (it will be a hint on d3d to update mips immediately)
 	  */
 	ETCF_AUTO_GENERATE_MIP_MAPS = 0x00000100,
+
+	//! Enable support for vertex shader texture sampling on some drivers
+	/** Default is false.
+	This adds a small costs to all texture switches.
+	Currently only affects D3D9. 
+	On OpenGL vertex shaders use the same texture unit as pixel shaders, so support there only depends on GL version and not on this flag
+	*/
+	ETCF_SUPPORT_VERTEXT_TEXTURE = 0x00000200,
 
 	/** This flag is never used, it only forces the compiler to compile
 	these enumeration values to 32 bit. */
@@ -347,4 +355,3 @@ protected:
 } // end namespace irr
 
 #endif
-

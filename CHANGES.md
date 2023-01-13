@@ -1,3 +1,11 @@
+## Changes (13-Jan-2023) 
+
+- Update Irrlicht SDK to tip of [irrlicht-mirror](https://gitlab.com/pgimeno/irrlicht-mirror) commit 7448cdfffc6fc8ea347e434a74c4e426cbcf0c8b
+- Differences with the upstream:
+  - Optional UseAbsolutePosition on SceneNodes. Default behavior is unchanged
+  - OBJ file loader uses 32-bit indices
+  - CameraSceneNode has UseRightHandProjection (Camera can use LH or RH projection). Default behavior is unchanged.
+
 ## Changes in 1.6 (23-Jun-2019)
 
 - Updated Irrlicht SDK to trunk r5824.

@@ -12,12 +12,13 @@ Architecture | Target Framework | NuGet Package
 `x64`        | net48            | [Irrlicht.NetFramework.x64](https://www.nuget.org/packages/Irrlicht.NetFramework.x64)
 `x86`        | netcoreapp31     | [Irrlicht.NetCore.x86](https://www.nuget.org/packages/Irrlicht.NetCore.x86)
 `x64`        | netcoreapp31     | [Irrlicht.NetCore.x64](https://www.nuget.org/packages/Irrlicht.NetCore.x64)
+`x64`        | net6.0-iwnodw    | (not published)
 
 ## Dependencies
 
-On .NET Core 3.1, only Windows is supported because C++/CLI .NET Core 3.1 is only supported on Windows.
+On .NET Core 3.1 and on, only Windows is supported because C++/CLI .NET Core 3.1 is only supported on Windows.
 
-The .NET Core 3.1 packages depend on `Ijwhost.dll` and `Irrlicht.dll`. The .NET Framework packages only depend on `Irrlicht.dll`. These DLLs are included and automatically copied to the build output directory. 
+The .NET Core 3.1 and later packages depend on `Ijwhost.dll` and `Irrlicht.dll`. The .NET Framework packages only depend on `Irrlicht.dll`. These DLLs are included and automatically copied to the build output directory. 
 
 ## Example 
 

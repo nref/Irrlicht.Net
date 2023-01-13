@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __I_MESH_BUFFER_H_INCLUDED__
-#define __I_MESH_BUFFER_H_INCLUDED__
+#ifndef IRR_I_MESH_BUFFER_H_INCLUDED
+#define IRR_I_MESH_BUFFER_H_INCLUDED
 
 #include "IReferenceCounted.h"
 #include "SMaterial.h"
@@ -12,6 +12,7 @@
 #include "SVertexIndex.h"
 #include "EHardwareBufferFlags.h"
 #include "EPrimitiveTypes.h"
+#include "EMeshBufferTypes.h"
 
 namespace irr
 {
@@ -71,11 +72,17 @@ namespace scene
 		virtual video::E_INDEX_TYPE getIndexType() const =0;
 
 		//! Get access to indices.
-		/** \return Pointer to indices array. */
+		/** Note: For historical reasons data pointer is of type u16*, but
+		for an index type of EIT_32BIT the index data is using an u32 array
+		and therefore needs a cast to u32*.
+		\return Pointer to indices array. */
 		virtual const u16* getIndices() const = 0;
 
 		//! Get access to indices.
-		/** \return Pointer to indices array. */
+		/** Note: For historical reasons data pointer is of type u16*, but
+		for an index type of EIT_32BIT the index data is using an u32 array
+		and therefore needs a cast to u32*.
+		\return Pointer to indices array. */
 		virtual u16* getIndices() = 0;
 
 		//! Get amount of indices in this meshbuffer.
@@ -112,15 +119,23 @@ namespace scene
 		//! returns texture coord of vertex i
 		virtual core::vector2df& getTCoords(u32 i) = 0;
 
+		//! returns color of vertex i
+		virtual video::SColor& getColor(u32 i) = 0;
+
+		//! returns color of vertex i
+		virtual const video::SColor& getColor(u32 i) const = 0;
+
 		//! Append the vertices and indices to the current buffer
-		/** Only works for compatible vertex types.
+		/** Only works for compatible vertex types
+		and not implemented for most buffers for now.
 		\param vertices Pointer to a vertex array.
 		\param numVertices Number of vertices in the array.
 		\param indices Pointer to index array.
 		\param numIndices Number of indices in array. */
 		virtual void append(const void* const vertices, u32 numVertices, const u16* const indices, u32 numIndices) = 0;
 
-		//! Append the meshbuffer to the current buffer
+		//! Not supported right now by any meshbuffer
+		//! In theory: Append the meshbuffer to the current buffer
 		/** Only works for compatible vertex types
 		\param other Buffer to append to this one. */
 		virtual void append(const IMeshBuffer* const other) = 0;
@@ -175,6 +190,24 @@ namespace scene
 			}
 			return 0;
 		}
+
+		//! Returns type of the class implementing the IMeshBuffer
+		/** \return The class type of this meshbuffer. */
+		virtual EMESH_BUFFER_TYPE getType() const
+		{
+			return EMBT_UNKNOWN;
+		}
+
+		//! Bitflags with options for cloning
+		enum ECloneFlags
+		{
+			ECF_VERTICES = 1,	//! clone the vertices (or copy pointer for SSharedMeshBuffer)
+			ECF_INDICES = 2		//! clone the indices
+		};
+
+		//! Create a new object with a copy of the meshbuffer
+		//\param cloneFlags A combination of ECloneFlags
+		virtual IMeshBuffer* createClone(int cloneFlags=ECF_VERTICES|ECF_INDICES) const = 0;
 
 	};
 

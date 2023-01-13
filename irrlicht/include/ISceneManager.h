@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __I_SCENE_MANAGER_H_INCLUDED__
-#define __I_SCENE_MANAGER_H_INCLUDED__
+#ifndef IRR_I_SCENE_MANAGER_H_INCLUDED
+#define IRR_I_SCENE_MANAGER_H_INCLUDED
 
 #include "IReferenceCounted.h"
 #include "irrArray.h"
@@ -453,13 +453,15 @@ namespace scene
 		where the scene node will be placed.
 		\param rotation: Initial rotation of the scene node.
 		\param scale: Initial scale of the scene node.
+		\param type: Type of cube-mesh to create. Check ECUBE_MESH_TYPE documentation for more info
 		\return Pointer to the created test scene node. This
 		pointer should not be dropped. See IReferenceCounted::drop()
 		for more information. */
 		virtual IMeshSceneNode* addCubeSceneNode(f32 size=10.0f, ISceneNode* parent=0, s32 id=-1,
 			const core::vector3df& position = core::vector3df(0,0,0),
 			const core::vector3df& rotation = core::vector3df(0,0,0),
-			const core::vector3df& scale = core::vector3df(1.0f, 1.0f, 1.0f)) = 0;
+			const core::vector3df& scale = core::vector3df(1.0f, 1.0f, 1.0f),
+			ECUBE_MESH_TYPE type=ECMT_1BUF_12VTX_NA) = 0;
 
 		//! Adds a sphere scene node of the given radius and detail
 		/** \param radius: Radius of the sphere.
@@ -614,7 +616,9 @@ namespace scene
 		virtual ICameraSceneNode* addCameraSceneNodeMaya(ISceneNode* parent=0,
 			f32 rotateSpeed=-1500.f, f32 zoomSpeed=200.f,
 			f32 translationSpeed=1500.f, s32 id=-1, f32 distance=70.f,
-			bool makeActive=true) =0;
+			bool makeActive=true
+			, f32 rotX = 0.f, f32 rotY = 0.f
+		) =0;
 
 		//! Adds a camera scene node with an animator which provides mouse and keyboard control appropriate for first person shooters (FPS).
 		/** This FPS camera is intended to provide a demonstration of a
@@ -1261,7 +1265,7 @@ namespace scene
 		See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimator* createFollowSplineAnimator(s32 startTime,
 			const core::array< core::vector3df >& points,
-			f32 speed = 1.0f, f32 tightness = 0.5f, bool loop=true, bool pingpong=false) = 0;
+			f32 speed = 1.0f, f32 tightness = 0.5f, bool loop=true, bool pingpong=false, bool steer=false) = 0;
 
 		//! Creates a simple ITriangleSelector, based on a mesh.
 		/** Triangle selectors
@@ -1370,7 +1374,7 @@ namespace scene
 
 		//! //! Creates a Triangle Selector, optimized by an octree.
 		/** \deprecated Use createOctreeTriangleSelector instead. This method may be removed by Irrlicht 1.9. */
-		_IRR_DEPRECATED_ ITriangleSelector* createOctTreeTriangleSelector(IMesh* mesh,
+		IRR_DEPRECATED ITriangleSelector* createOctTreeTriangleSelector(IMesh* mesh,
 			ISceneNode* node, s32 minimalPolysPerNode=32)
 		{
 			return createOctreeTriangleSelector(mesh, node, minimalPolysPerNode);
@@ -1693,4 +1697,3 @@ namespace scene
 } // end namespace irr
 
 #endif
-

@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __I_IRRLICHT_CREATION_PARAMETERS_H_INCLUDED__
-#define __I_IRRLICHT_CREATION_PARAMETERS_H_INCLUDED__
+#ifndef IRR_IRRLICHT_CREATION_PARAMETERS_H_INCLUDED
+#define IRR_IRRLICHT_CREATION_PARAMETERS_H_INCLUDED
 
 #include "EDriverTypes.h"
 #include "EDeviceTypes.h"
@@ -29,7 +29,7 @@ namespace irr
 			ZBufferBits(24),
 			Fullscreen(false),
 			ExitOnClose(true),
-			WindowResizable(false),
+			WindowResizable(2),
 			Stencilbuffer(true),
 			Vsync(false),
 			AntiAlias(0),
@@ -123,8 +123,9 @@ namespace irr
 
 		//! Should a non-fullscreen window be resizable.
 		/** Might not be supported by all devices. Ignored when Fullscreen is true.
-		Default: false */
-		bool WindowResizable;
+		Values: 0 = not resizable, 1 = resizable, 2 = system decides default itself
+		Default: 2*/
+		u8 WindowResizable;
 
 		//! If true, closeDevice will exit the application. Else, only the window will be closed.
 		/** Default is true. Set to false if multiple devices are created and closed in the same application. */
@@ -311,4 +312,3 @@ namespace irr
 } // end namespace irr
 
 #endif
-

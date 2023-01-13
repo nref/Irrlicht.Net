@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef __IRR_QUATERNION_H_INCLUDED__
-#define __IRR_QUATERNION_H_INCLUDED__
+#ifndef IRR_QUATERNION_H_INCLUDED
+#define IRR_QUATERNION_H_INCLUDED
 
 #include "irrTypes.h"
 #include "irrMath.h"
@@ -54,9 +54,6 @@ class quaternion
 
 		//! inequality operator
 		bool operator!=(const quaternion& other) const;
-
-		//! Assignment operator
-		inline quaternion& operator=(const quaternion& other);
 
 #ifndef IRR_TEST_BROKEN_QUATERNION_USE
 		//! Matrix assignment operator
@@ -240,15 +237,6 @@ inline bool quaternion::operator!=(const quaternion& other) const
 	return !(*this == other);
 }
 
-// assignment operator
-inline quaternion& quaternion::operator=(const quaternion& other)
-{
-	X = other.X;
-	Y = other.Y;
-	Z = other.Z;
-	W = other.W;
-	return *this;
-}
 
 #ifndef IRR_TEST_BROKEN_QUATERNION_USE
 // matrix assignment operator
@@ -768,4 +756,3 @@ inline core::quaternion& quaternion::rotationFromTo(const vector3df& from, const
 } // end namespace irr
 
 #endif
-
